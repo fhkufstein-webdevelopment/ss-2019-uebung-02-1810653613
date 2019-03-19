@@ -11,21 +11,24 @@
 
 .btn {
     /* TODO */
-
+    @include transition-property(padding);
+    @include transition-duration(300ms);
+    @include transition-delay(0ms);
+    @include transition-timing-function(linear);
     &.ease-in {
-        /* TODO */
+        @include transition(padding 300ms ease-in 100ms);
     }
 
     &.ease-out {
-        /* TODO */
+        @include transition(padding 300ms ease out 100ms);
     }
 
     &.ease-in-out {
-        /* TODO */
+        @include transition(padding 1000ms ease-in-out 300ms);
     }
 
     &.green {
-        /* TODO */
+        @include transition(color 600ms linear 300ms);
     }
 
     &.animation {
