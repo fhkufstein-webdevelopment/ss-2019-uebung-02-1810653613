@@ -1,0 +1,19 @@
+/* Aufgabe 4) */
+
+@mixin margin ($value){
+  margin: $value;
+}
+
+@mixin breakpoint ($width){
+  @media (min-width: $width){
+    @content
+  }
+}
+
+.OnlyDesktop {
+  display:none;
+
+  @include breakpoint (990px){
+    display: block;
+  }
+}
