@@ -1,6 +1,20 @@
 @import "compass/reset";
 @import "compass/css3";
 
+/* Aufgabe 2 A) Variablen eingesetzt wo sinnvoll */
+
+$Error: #d9534f;
+$Warning: #f0ad4e;
+$Success: #5cb85c;
+$border: 1px solid #000;
+$padding: 5px;
+$margin: 10px 5px 10px 5px
+
+/* 2 B) Was soll vererbt werden ? */
+
+/* 2 C) Keine sinnvollen Verschachtelungen entdeckt */
+
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -77,25 +91,31 @@ label {
     display: block;
     height: 100%;
 
+    /* 2 D) Mixins */
+
     -moz-transition-property: width;
     -o-transition-property: width;
     -webkit-transition-property: width;
     transition-property: width;
+    @include transition-property(width);
 
     -moz-transition-delay: 0;
     -o-transition-delay: 0;
     -webkit-transition-delay: 0;
     transition-delay: 0;
+    @include transition-delay(0);
 
     -moz-transition-duration: 250ms;
     -o-transition-duration: 250ms;
     -webkit-transition-duration: 250ms;
     transition-duration: 250ms;
+    @include transition-duration(250ms);
 
     -moz-transition-timing-function: linear;
     -o-transition-timing-function: linear;
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
+    @include transition-timing-function(linear);
 }
 
 .passwordWrapper::after {
